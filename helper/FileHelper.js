@@ -2,7 +2,7 @@ import multer from "multer";
 import moment from "moment"; 
 let storage = multer.diskStorage({
     destination: (request, file, callback) => {
-        callback(null, "uploads/images");
+        callback(null, "uploads/excel");
     },
     filename: (request, file, callback) => {
         callback(null, getFilename(file));

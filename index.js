@@ -132,7 +132,7 @@ async function writeExcel(data){
   fs.writeFileSync(`advisoryConverted/${file_name}`, excelBuffer);
   return file_name;
 }
-app.post("/uploadFile",upload.single("image"),async(req,res)=>{
+app.post("/uploadFile",upload.single("excel"),async(req,res)=>{
   console.log(req.file);
   const workbook = Excel.readFile(req.file.path);
   const sheetName = workbook.SheetNames[0];
